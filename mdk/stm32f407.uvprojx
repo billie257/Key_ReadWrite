@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F40_41xxx,USE_STDPERIPH_DRIVER,HSE_VALUE=8000000</Define>
               <Undefine></Undefine>
-              <IncludePath>..\app;..\driver;..\firmware\cmsis\core;..\firmware\cmsis\device;..\firmware\driver\inc</IncludePath>
+              <IncludePath>..\app;..\driver;..\driver\cpu_delay;..\driver\key;..\driver\led;..\driver\usart;..\firmware\cmsis\core;..\firmware\cmsis\device;..\firmware\driver\inc</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -400,24 +400,24 @@
           <GroupName>driver</GroupName>
           <Files>
             <File>
+              <FileName>key.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\driver\key\key.c</FilePath>
+            </File>
+            <File>
               <FileName>led.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\driver\led.c</FilePath>
+              <FilePath>..\driver\led\led.c</FilePath>
             </File>
             <File>
               <FileName>driver_timer.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\driver\driver_timer.c</FilePath>
+              <FilePath>..\driver\cpu_delay\driver_timer.c</FilePath>
             </File>
             <File>
               <FileName>driver_usart.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\driver\driver_usart.c</FilePath>
-            </File>
-            <File>
-              <FileName>key.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\driver\key.c</FilePath>
+              <FilePath>..\driver\usart\driver_usart.c</FilePath>
             </File>
           </Files>
         </Group>

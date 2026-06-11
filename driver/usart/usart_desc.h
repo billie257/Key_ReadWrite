@@ -2,6 +2,7 @@
 #define __USART_DESC_H__
 
 #include "stm32f4xx.h"
+#include "driver_usart.h"
 
 struct usart_desc
 {
@@ -12,6 +13,7 @@ struct usart_desc
 	uint16_t PinSource_1;
 	uint16_t PinSource_2;
 	uint8_t AF_usart;
+	usart_received_func_t func;
 };
 
 #endif /* __USART_DESC_H__ */
