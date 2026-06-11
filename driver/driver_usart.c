@@ -31,6 +31,7 @@ void usart_init(usart_desc_t usart)
   GPIO_Init(GPIOA, &GPIO_InitStructure);
   
 	USART_Init(usart->USARTx, &USART_InitStructure);   
+	USART_ITConfig(usart->USARTx, USART_IT_RXNE, ENABLE);
   USART_Cmd(usart->USARTx, ENABLE);
 }
 

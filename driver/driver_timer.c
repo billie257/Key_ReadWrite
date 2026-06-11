@@ -22,3 +22,15 @@ void cpu_delay(uint32_t us)
 			SysTick->CTRL &= ~SysTick_CTRL_ENABLE_Msk;
 		}
 }
+
+void SetTickInt(void)
+{
+	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4);
+		
+	SysTick->LOAD = SystemCoreClock / 1000 - 1;
+	SysTick->VAL = 0;
+	SysTick->CTRL = SysTick_CTRL_CLKSOURCE_Msk | SysTick_CTRL_TICKINT_Msk;
+	SysTick->CTRL |= SysTick_CTRL_ENABLE_Msk;
+
+	NVIC_SetPriority(SysTick_IRQn, 5); // before this line must use NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4);	
+}

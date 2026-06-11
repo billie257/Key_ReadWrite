@@ -37,6 +37,8 @@ void board_lowlevel_init(void)
 	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOF, ENABLE);
 	
 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_USART1, ENABLE);
+	
+	RCC_APB2PeriphClockCmd(RCC_APB2Periph_SYSCFG, ENABLE);
 }
 
 int fputc(int ch, FILE* stream)

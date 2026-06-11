@@ -5,5 +5,7 @@
 
 void cpu_delay(uint32_t us);
 
+void SetTickInt(void);
+
 #endif /* __DRIVER_TIMER_H__ */
 
